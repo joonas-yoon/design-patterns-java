@@ -1,38 +1,48 @@
 # 디자인 패턴 자바
 
-Java 로 구현해보는 디자인 패턴
+Java로 구현해보는 디자인 패턴
+
+> 디자인 패턴은 모든 문제를 해결할 수 없다. 참고할 뿐이다.
+
+> 아래 목록은 알파벳순으로 정렬되었으며, **자주 사용되는 패턴은 굵게** 표시하였습니다.
 
 ### 생성 패턴 (Creational Design Patterns)
 
-1. [ ] Singleton Pattern
-2. [ ] Factory Pattern
-3. [ ] Abstract Factory Pattern
-4. [ ] Builder Pattern
-5. [ ] Prototype Pattern
+> 주로 생성 방식이나 절차를 결정하는 것과 관련된 패턴
+
+- [ ] **Abstract Factory Pattern**
+- [ ] Builder Pattern
+- [ ] **Factory Pattern**
+- [ ] Prototype Pattern
+- [ ] **Singleton Pattern**
 
 ### 구조 패턴 (Structural Design Patterns)
 
-1. [ ] Adapter Pattern
-2. [ ] Composite Pattern
-3. [ ] Proxy Pattern
-4. [ ] Flyweight Pattern
-5. [ ] Facade Pattern
-6. [ ] Bridge Pattern
-7. [ ] Decorator Pattern
+> 구조를 유연하고 효율적으로 유지하거나, 더 큰 구조로 조립하는 등의 패턴
+
+- [ ] **Adapter Pattern**
+- [ ] Bridge Pattern
+- [ ] **Composite Pattern**
+- [ ] **Decorator Pattern**
+- [ ] **Facade Pattern**
+- [ ] Flyweight Pattern
+- [ ] **Proxy Pattern**
 
 ### 행동 패턴 (Behavioral Design Patterns)
 
-1. [ ] Template Method Pattern
-2. [ ] Mediator Pattern
-3. [ ] Chain of Responsibility Pattern
-4. [ ] Observer Pattern
-5. [ ] Strategy Pattern
-6. [ ] Command Pattern
-7. [ ] State Pattern
-8. [ ] Visitor Pattern
-9. [ ] Interpreter Pattern
-10. [ ] Iterator Pattern
-11. [ ] Memento Pattern
+> 클래스 간의 상호 작용이나 역할(책임)에 대해 다루는 패턴
+
+- [ ] Chain of Responsibility Pattern
+- [ ] Command Pattern
+- [ ] Interpreter Pattern
+- [ ] **Iterator Pattern**
+- [ ] Mediator Pattern
+- [ ] Memento Pattern
+- [ ] **Observer Pattern**
+- [ ] **State Pattern**
+- [ ] **Strategy Pattern**
+- [ ] **Template Method Pattern**
+- [ ] Visitor Pattern
 
 ### 그 외 (Miscellaneous Design Patterns)
 
