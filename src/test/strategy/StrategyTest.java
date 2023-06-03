@@ -4,9 +4,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Arrays;
 import main.designpatterns.strategy.Animal;
+import main.designpatterns.strategy.Bird;
 import main.designpatterns.strategy.Cat;
 import main.designpatterns.strategy.Dog;
 import main.designpatterns.strategy.Human;
+import main.designpatterns.strategy.flying.FlyWithWings;
 import main.designpatterns.strategy.walking.Bipedalism;
 import main.designpatterns.strategy.walking.Quadrupedalism;
 import org.junit.jupiter.api.Test;
@@ -38,6 +40,15 @@ public class StrategyTest extends BaseUnitTest {
     }
 
     @Test
+    public void testFlyPolymorph() {
+        Animal human = new Human();
+        Animal bird = new Bird();
+
+        assertEquals("Can not fly", human.fly());
+        assertEquals("Woosh", bird.fly());
+    }
+
+    @Test
     public void testWalkChangeDynamically() {
         Animal human = new Human();
 
@@ -46,5 +57,15 @@ public class StrategyTest extends BaseUnitTest {
 
         human.setWalkingType(new Bipedalism());
         assertEquals(2, human.walk());
+    }
+
+    @Test
+    public void testFlyChangeDynamically() {
+        Animal human = new Human();
+
+        assertEquals("Can not fly", human.fly());
+
+        human.setFlyingType(new FlyWithWings());
+        assertEquals("Woosh", human.fly());
     }
 }
