@@ -40,7 +40,7 @@ Java로 구현해보는 디자인 패턴
 - [ ] Memento Pattern
 - [ ] **Observer Pattern**
 - [ ] **State Pattern**
-- [ ] **Strategy Pattern**
+- [x] **[Strategy Pattern](src/main/designpatterns/strategy)**
 - [ ] **Template Method Pattern**
 - [ ] Visitor Pattern
 
@@ -55,3 +55,4 @@ Java로 구현해보는 디자인 패턴
 * https://github.com/RefactoringGuru/design-patterns-java
 * https://refactoring.guru/ko/design-patterns
 * https://www.digitalocean.com/community/tutorials/java-design-patterns-example-tutorial
+* https://www.oreilly.com/library/view/head-first-design/0596007124/
