@@ -62,7 +62,7 @@ classDiagram
     Animal <|-- Human
 ```
 
-그리고 다음과 같이 **인터페이스에 맞춰서** 구현하여 한다.
+그리고 다음과 같이 **인터페이스에 맞춰서** 구현한다.
 
 ```java
 class Dog {
@@ -140,6 +140,7 @@ class Cat {
 }
 
 class Human {
+
     public Human() {
         howToWalk = new Bipedalism();
     }
@@ -148,10 +149,13 @@ class Human {
 
 하지만 사람도 걸음마를 배우기 전까지는 네 발로 걷다가, 어느 순간부터 두 발로 걷을 수 있다.
 
+즉, 인스턴스 생성 이후에 실행될 함수가 변경될 수 있도록 고려해야한다.
+
 우리는 이미 행동 클래스를 별도로 위임했으므로 이는 쉽게 해결할 수 있다.
 
 ```java
 class Animal {
+
     Walkable howToWalk;
 
     public void setWalkingWay(Walkable howToWalk) {
