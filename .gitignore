@@ -78,3 +78,9 @@ fabric.properties
 
 # ignore IntelliJ files all
 .idea
+
+# Maven outputs
+target/
+
+# JUnit Approvals
+**/*.received.txt
