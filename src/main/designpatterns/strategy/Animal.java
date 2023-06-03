@@ -11,11 +11,14 @@ public class Animal {
         howToWalk = new NotMovable();
     }
 
-    public void setWalkingWay(Walkable howToWalk) {
+    public void setWalkingType(Walkable howToWalk) {
         this.howToWalk = howToWalk;
     }
 
-    public void walk() {
-        howToWalk.step();
+    /**
+     * @return Integer is how many footprints after walking
+     */
+    public int walk() {
+        return howToWalk.step();
     }
 }

@@ -158,7 +158,7 @@ class Animal {
 
     Walkable howToWalk;
 
-    public void setWalkingWay(Walkable howToWalk) {
+    public void setWalkingType(Walkable howToWalk) {
         this.howToWalk = howToWalk;
     }
 
@@ -170,12 +170,12 @@ class Animal {
 Animal human = new Human();
 
 // 최초에는 사족보행
-human.setWalkingWay(new Quadrupedalism());
-human.walk();
+human.setWalkingType(new Quadrupedalism());
+        human.walk();
 
 // 언제든 이족보행으로 변경 가능
-human.setWalkingWay(new Bipedalism());
-human.walk();
+        human.setWalkingType(new Bipedalism());
+        human.walk();
 ```
 
 앞으로 소리를 내는 방식 등 행동에 대해 새롭게 추가하게 될 경우, 같은 방식으로 유연하게 대처할 수 있다.

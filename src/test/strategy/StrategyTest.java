@@ -1,5 +1,7 @@
 package test.strategy;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.util.Arrays;
 import main.designpatterns.strategy.Animal;
 import main.designpatterns.strategy.Cat;
@@ -17,24 +19,32 @@ public class StrategyTest extends BaseUnitTest {
         Animal human = new Human();
         Animal dog = new Dog();
         Animal cat = new Cat();
-        for (Animal animal : Arrays.asList(human, dog, cat)) {
-            System.out.print(animal.getClass().getSimpleName() + ": ");
-            animal.walk();
-        }
 
-        assertStdoutTrue();
+        for (Animal animal : Arrays.asList(human, dog, cat)) {
+            String className = animal.getClass().getSimpleName();
+            int steps = animal.walk();
+            switch (className) {
+                case "Human":
+                    assertEquals(2, steps);
+                    break;
+                case "Dog":
+                case "Cat":
+                    assertEquals(4, steps);
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 
     @Test
     public void testWalkChangeDynamically() {
         Animal human = new Human();
 
-        human.setWalkingWay(new Quadrupedalism());
-        human.walk();
+        human.setWalkingType(new Quadrupedalism());
+        assertEquals(4, human.walk());
 
-        human.setWalkingWay(new Bipedalism());
-        human.walk();
-
-        assertStdoutTrue();
+        human.setWalkingType(new Bipedalism());
+        assertEquals(2, human.walk());
     }
 }

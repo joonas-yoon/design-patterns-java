@@ -2,7 +2,8 @@ package main.designpatterns.strategy.walking;
 
 public class NotMovable implements Walkable {
 
-    public void step() {
+    public int step() {
         System.out.println("Can't not move");
+        return 0;
     }
 }
