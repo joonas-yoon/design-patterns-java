@@ -1,5 +1,7 @@
 # 디자인 패턴 자바
 
+<img align="right" alt="Unit Test" src="https://github.com/joonas-yoon/design-patterns-java/actions/workflows/junit.yml/badge.svg" />
+
 Java로 구현해보는 디자인 패턴
 
 > 디자인 패턴은 모든 문제를 해결할 수 없다. 참고할 뿐이다.
