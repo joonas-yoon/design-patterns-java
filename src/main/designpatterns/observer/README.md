@@ -27,16 +27,16 @@
 ```mermaid
 classDiagram
     class WeatherData {
-        -temperature
-        -humidity
-        -pressure
+        temperature
+        humidity
+        pressure
     }
     class WeatherChart {
         WeatherData data
         addData(WeatherData data)
         show()
     }
-    WeatherData --> WeatherChart
+    WeatherChart <-- WeatherData
 ```
 
 ```java
@@ -71,26 +71,27 @@ classDiagram
         update(Observable subject)
     }
     class Observable {
-        Vector&lt;Observer&gt; observers
+        observers: Vector&lt;Observer&gt;
         addObserver(Observer o)
         deleteObserver(Observer o)
         notifyObservers()
     }
     class WeatherData {
-        -temperature
-        -humidity
-        -pressure
+        temperature: float
+        humidity: float
+        pressure: float
     }
     class WeatherChart {
-        WeatherData data
         addData(WeatherData data)
         show()
     }
     Observer <-- Observable
     Observer <|-- WeatherChart
     Observable <|-- WeatherData
-    WeatherData --> WeatherChart
 ```
+
+두 클래스를 `Observer`, `Observable`로 만들면서 `WeatherData`와 `WeatherChart` 사이의 의존성이 자연스럽게 줄었다.
+_(아직 함수 파라미터로는 남아있지만)_
 
 > 참고로 자바에는 `Observer`, `Observable` 과 같은 클래스/인터페이스가 내장 패키지에 존재한다.
 >
@@ -130,14 +131,79 @@ weatherData.addObserver(chart);
 
 ```java
 public class WeatherChart implements Observer {
-
+    
     private final List<Float> temperatures = new ArrayList<>();
 
     @Override
     public void update(Observable o, Object arg) {
         // 어느 Subject에서 온 호출인지에 따라 적절하게 행동
         if (o instanceof WeatherData weatherData) {
+            addData(weatherData);
+        }
+    }
+
+    void addData(WeatherData weatherData) {
+        temperatures.add(weatherData.temperature);
+    }
+}
+```
+
+같은 방식으로 다른 클래스에 대한 변경에도 대응할 수 있다.
+
+예를 들어, 차트(`WeatherChart`) 항목에 시간(`Time`)이 추가되었고, 시간이 변경될 때 마다 새로운 값을 받아와 처리할 수 있다.
+
+시간(`Time`) 값이 저녁 10시부터 아침 7시 사이인 경우에는 다크모드(`isDarkMode`)가 되도록 해보자.
+
+```mermaid
+classDiagram
+    class Observer {
+        update(Observable subject)
+    }
+    class Observable {
+        observers: Vector&lt;Observer&gt;
+        addObserver(Observer o)
+        deleteObserver(Observer o)
+        notifyObservers()
+    }
+    class WeatherData {
+        temperature: float
+        humidity: float
+        pressure: float
+    }
+    class Time {
+        hours: int
+        minutes: int
+        seconds: int
+    }
+    class WeatherChart {
+        isDarkMode: boolean
+        addData(WeatherData data)
+        show()
+    }
+    Observer <-- Observable
+    Observer <|-- WeatherChart
+    Observable <|-- WeatherData
+    Observable <|-- Time
+```
+
+다이어그램 상으로는 옵저버(Observer)인 `WeatherChart`와의 관계에서는 변경된 부분이 없다.
+
+```java
+public class WeatherChart implements Observer {
+
+    private final boolean isDarkMode = false;
+    private final List<Float> temperatures = new ArrayList<>();
+
+    @Override
+    public void update(Observable o, Object arg) {
+        // WeatherData가 변경되었을 때 처리
+        if (o instanceof WeatherData weatherData) {
             temperatures.add(weatherData.temperature);
+        }
+        // Time이 변경되었을 때 처리
+        if (o instanceof Time time) {
+            int hours = time.getHours();
+            isDarkMode = (hours < 7 || hours > 22);
         }
     }
 }
