@@ -13,11 +13,15 @@ public class BaseUnitTest {
         outputs.setLength(0);
     }
 
-    protected void logging(Object s) {
-        logging(s, true);
+    protected void print(Object s) {
+        print(s, false);
     }
 
-    protected void logging(Object s, boolean newline) {
+    protected void println(Object s) {
+        print(s, true);
+    }
+
+    protected void print(Object s, boolean newline) {
         String inputString = s.toString();
         if (newline) {
             inputString += "\n";
@@ -27,7 +31,7 @@ public class BaseUnitTest {
         outputs.append(encodedString);
     }
 
-    protected void assertLoggingTrue() {
+    protected void assertPrintsTrue() {
         String outputString = outputs.toString();
         String encodedString = new String(outputString.getBytes(), StandardCharsets.UTF_8);
         Approvals.verify(encodedString);
