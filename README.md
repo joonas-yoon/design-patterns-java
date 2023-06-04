@@ -40,7 +40,7 @@ Java로 구현해보는 디자인 패턴
 - [ ] **Iterator Pattern**
 - [ ] Mediator Pattern
 - [ ] Memento Pattern
-- [ ] **Observer Pattern**
+- [x] **[Observer Pattern](src/main/designpatterns/observer)**
 - [ ] **State Pattern**
 - [x] **[Strategy Pattern](src/main/designpatterns/strategy)**
 - [ ] **Template Method Pattern**
