@@ -1,0 +1,11 @@
+# Start observing
+<Nothing to display>
+Temperature changed
+[Forecast] current: 23.30('C), expected next: 23.30('C)
+Humidity changed
+[Forecast] current: 23.30('C), expected next: 23.30('C)
+Temperature changed
+[Forecast] current: 28.70('C), expected next: 26.00('C)
+# Stop observing
+Temperature changed
+[Forecast] current: 28.70('C), expected next: 26.00('C)

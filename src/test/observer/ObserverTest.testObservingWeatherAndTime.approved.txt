@@ -1,0 +1,13 @@
+# Start observing
+{ "currentTime": "", "temperatures": [], "humidities": [], "pressures": [] }
+Weather changed
+{ "currentTime": "", "temperatures": [0.85], "humidities": [23.3], "pressures": [1015.0] }
+Time and weather changed
+{ "currentTime": "00:16:40", "temperatures": [0.85, 0.83], "humidities": [23.3, 25.6], "pressures": [1015.0, 1012.0] }
+Time changed
+{ "currentTime": "00:33:20", "temperatures": [0.85, 0.83], "humidities": [23.3, 25.6], "pressures": [1015.0, 1012.0] }
+# Stop observing
+Weather changed
+{ "currentTime": "00:33:20", "temperatures": [0.85, 0.83], "humidities": [23.3, 25.6], "pressures": [1015.0, 1012.0] }
+Time changed
+{ "currentTime": "00:50:00", "temperatures": [0.85, 0.83], "humidities": [23.3, 25.6], "pressures": [1015.0, 1012.0] }

@@ -1,0 +1,9 @@
+# Start observing
+Time changed
+{ "currentTime": "03:26:40", "temperatures": [], "humidities": [], "pressures": [] }
+# Stop observing
+Time changed
+{ "currentTime": "03:26:40", "temperatures": [], "humidities": [], "pressures": [] }
+# Restart observing
+Time changed
+{ "currentTime": "12:10:30", "temperatures": [], "humidities": [], "pressures": [] }
