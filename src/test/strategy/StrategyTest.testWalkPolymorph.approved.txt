@@ -1,3 +1,0 @@
-Human: Use 2 leg to walk
-Dog: Use 4 leg to walk
-Cat: Use 4 leg to walk
