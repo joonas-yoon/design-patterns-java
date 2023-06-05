@@ -25,7 +25,7 @@ Java로 구현해보는 디자인 패턴
 - [ ] **Adapter Pattern**
 - [ ] Bridge Pattern
 - [ ] **Composite Pattern**
-- [ ] **Decorator Pattern**
+- [x] **[Decorator Pattern](src/main/designpatterns/decorator)**
 - [ ] **Facade Pattern**
 - [ ] Flyweight Pattern
 - [ ] **Proxy Pattern**
