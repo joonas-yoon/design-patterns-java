@@ -28,6 +28,8 @@ class DecoratorTest extends BaseUnitTest {
         println("Add ForVegan option");
         VeganPizza superHotVeganPizza = new VeganPizza(superHotPizza);
         println(toString(superHotVeganPizza));
+
+        assertPrintsTrue();
     }
 
     @Test
@@ -39,6 +41,8 @@ class DecoratorTest extends BaseUnitTest {
         println("Add GlutenFree option");
         GlutenFreePizza glutenFreePizza2 = new GlutenFreePizza(pizza2);
         println(toString(glutenFreePizza2));
+
+        assertPrintsTrue();
     }
 
     private static String toString(Pizza pizza) {

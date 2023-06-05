@@ -1,0 +1,6 @@
+# Create new DetroitPizza
+{Dough=PLAIN/RECTANGLE, Toppings=[Tomato sauce, Pepperoni, Mozzarella cheese, Cheddar cheese]}, price=6000
+
+Add GlutenFree option
+{Dough=GLUTEN_FREE/RECTANGLE, Toppings=[Tomato sauce, Pepperoni, Mozzarella cheese, Cheddar cheese]}, price=10000
+

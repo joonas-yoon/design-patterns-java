@@ -1,0 +1,12 @@
+# Create new HawaiianPizza
+{Dough=PLAIN/CIRCLE, Toppings=[Tomato sauce, Pineapple, Bacon, Cheese]}, price=8000
+
+Add HotSauced option
+{Dough=PLAIN/CIRCLE, Toppings=[Tomato sauce, Pineapple, Bacon, Cheese, Hot sauce]}, price=8300
+
+Add HotSauced option
+{Dough=PLAIN/CIRCLE, Toppings=[Tomato sauce, Pineapple, Bacon, Cheese, Hot sauce, Hot sauce]}, price=8600
+
+Add ForVegan option
+{Dough=PLAIN/CIRCLE, Toppings=[Tomato sauce, Pineapple, Vegan cheese, Hot sauce, Hot sauce]}, price=11600
+
