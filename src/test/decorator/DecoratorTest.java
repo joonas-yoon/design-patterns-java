@@ -1,11 +1,11 @@
 package test.decorator;
 
 import main.designpatterns.decorator.DetroitPizza;
-import main.designpatterns.decorator.GlutenFreePizza;
 import main.designpatterns.decorator.HawaiianPizza;
-import main.designpatterns.decorator.HotSaucePizza;
 import main.designpatterns.decorator.Pizza;
-import main.designpatterns.decorator.VeganPizza;
+import main.designpatterns.decorator.options.GlutenFreePizza;
+import main.designpatterns.decorator.options.HotSaucePizza;
+import main.designpatterns.decorator.options.VeganPizza;
 import org.junit.jupiter.api.Test;
 import test.BaseUnitTest;
 

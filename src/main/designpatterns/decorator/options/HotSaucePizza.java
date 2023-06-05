@@ -1,6 +1,8 @@
-package main.designpatterns.decorator;
+package main.designpatterns.decorator.options;
 
 import java.util.List;
+import main.designpatterns.decorator.Pizza;
+import main.designpatterns.decorator.PizzaTopper;
 
 public class HotSaucePizza extends PizzaTopper {
 
