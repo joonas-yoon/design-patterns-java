@@ -1,0 +1,8 @@
+# Order NY Style cheese pizza
+got pizza: Pizza {name=New York Style Cheese Pizza, dough=Thin crust (sliced), sauce=Marinara sauce (grilled), toppings=[dry mozzarella cheese, parmesan cheese]}
+# Order NY Style pepperoni pizza
+got pizza: Pizza {name=New York Style Pepperoni Pizza, dough=Thin crust (sliced), sauce=Marinara sauce (grilled), toppings=[dry mozzarella cheese, parmesan cheese, Pepperoni]}
+# Order Chicago Style cheese pizza
+got pizza: Pizza {name=New York Style Cheese Pizza, dough=Very thick crust (square), sauce=Plum tomato sauce (grilled), toppings=[sliced mozzarella cheese]}
+# Order Chicago Style pepperoni pizza
+got pizza: Pizza {name=New York Style Pepperoni Pizza, dough=Very thick crust (square), sauce=Plum tomato sauce (grilled), toppings=[sliced mozzarella cheese, Pepperoni]}
