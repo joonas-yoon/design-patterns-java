@@ -95,7 +95,8 @@ _(아직 함수 파라미터로는 남아있지만)_
 
 > 참고로 자바에는 `Observer`, `Observable` 과 같은 클래스/인터페이스가 내장 패키지에 존재한다.
 >
-> Java 9 이후 버전부터는 Deprecated 처리되었지만, 아직은 사용할 수 있다.
+> JDK 9 버전부터는 Deprecated 처리되었고 [JDK 10 버전을 마지막으로](https://docs.oracle.com/javase/10/docs/api/java/util/Observer.html) 사라진 클래스지만,
+> [OpenJDK를 쓴다면 여전히](https://devdocs.io/openjdk~19/java.base/java/util/observer) 사용할 수 있는 클래스이다. 
 
 이제 `WeatherData`는 주체(Subject)가 되어서 값이 변경될 때 모든 옵저버(Observer)들에게 변경되었음을 알린다. (`notifyObservers()`)
 
