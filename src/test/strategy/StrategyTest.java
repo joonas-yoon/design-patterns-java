@@ -14,7 +14,7 @@ import main.designpatterns.strategy.walking.Quadrupedalism;
 import org.junit.jupiter.api.Test;
 import test.BaseUnitTest;
 
-public class StrategyTest extends BaseUnitTest {
+class StrategyTest extends BaseUnitTest {
 
     @Test
     public void testWalkPolymorph() {
@@ -26,15 +26,10 @@ public class StrategyTest extends BaseUnitTest {
             String className = animal.getClass().getSimpleName();
             int steps = animal.walk();
             switch (className) {
-                case "Human":
-                    assertEquals(2, steps);
-                    break;
-                case "Dog":
-                case "Cat":
-                    assertEquals(4, steps);
-                    break;
-                default:
-                    break;
+                case "Human" -> assertEquals(2, steps);
+                case "Dog", "Cat" -> assertEquals(4, steps);
+                default -> {
+                }
             }
         }
     }
