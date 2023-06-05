@@ -14,7 +14,7 @@ Java로 구현해보는 디자인 패턴
 
 - [ ] **Abstract Factory Pattern**
 - [ ] Builder Pattern
-- [ ] **Factory Pattern**
+- [ ] **[Factory Pattern](src/main/designpatterns/factorymethod)**
 - [ ] Prototype Pattern
 - [ ] **Singleton Pattern**
 
