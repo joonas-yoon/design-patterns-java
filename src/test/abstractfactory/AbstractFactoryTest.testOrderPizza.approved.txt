@@ -1,0 +1,12 @@
+# Order NY Style cheese pizza
+got pizza: Pizza {name=NewYork Style Cheese Pizza, ingredients=[Thin crispy and chewy dough (sliced), Thick and rich sauce (grilled), Mozzarella and parmesan and provolone cheeses, No veggies], toppings=[pepperoni, sausage, mushrooms, onions, peppers, olives, green peppers]}
+# Order Chicago Style cheese pizza
+got pizza: Pizza {name=Chicago Style Cheese Pizza, ingredients=[Thick deep-dish and buttery dough (sliced), Thin and tangy sauce (grilled), Mozzarella cheese, No veggies], toppings=[pepperoni, sausage, mushrooms, onions, peppers, olives]}
+# Order NY Style pepperoni pizza
+got pizza: Pizza {name=NewYork Style Pepperoni Pizza, ingredients=[Thin crispy and chewy dough (sliced), Thick and rich sauce (grilled), Mozzarella and parmesan and provolone cheeses, No veggies], toppings=[pepperoni, sausage, mushrooms, onions, peppers, olives, green peppers]}
+# Order Chicago Style pepperoni pizza
+got pizza: Pizza {name=Chicago Style Pepperoni Pizza, ingredients=[Thick deep-dish and buttery dough (sliced), Thin and tangy sauce (grilled), Mozzarella cheese, No veggies], toppings=[pepperoni, sausage, mushrooms, onions, peppers, olives]}
+# Order NY Style veggie pizza
+got pizza: Pizza {name=NewYork Style Veggie Pizza, ingredients=[Thin crispy and chewy dough (sliced), Thick and rich sauce (grilled), No cheese, Spinach and broccoli and tomatoes], toppings=[pepperoni, sausage, mushrooms, onions, peppers, olives, green peppers]}
+# Order Chicago Style veggie pizza
+got pizza: Pizza {name=Chicago Style Veggie Pizza, ingredients=[Thick deep-dish and buttery dough (sliced), Thin and tangy sauce (grilled), No cheese, Eggplant, jalapenos], toppings=[pepperoni, sausage, mushrooms, onions, peppers, olives]}
