@@ -48,10 +48,6 @@ class PizzaStore {
 
 ```mermaid
 classDiagram
-    class Pizza
-    class PizzaStore
-    class NewYorkStylePizza
-    class ChicagoStylePizza
     Pizza <|-- NewYorkStylePizza
     Pizza <|-- ChicagoStylePizza
     PizzaStore *-- Pizza
@@ -63,12 +59,6 @@ classDiagram
 
 ```mermaid
 classDiagram
-    class Pizza
-    class PizzaStore
-    class NewYorkStylePizza
-    class ChicagoStylePizza
-    class NewYorkPizzaStore
-    class ChicagoPizzaStore
     Pizza <|-- NewYorkStylePizza
     Pizza <|-- ChicagoStylePizza
     NewYorkPizzaStore --|> PizzaStore
