@@ -1,13 +1,13 @@
 package test.singleton;
 
-import main.designpatterns.singleton.Application;
-import main.designpatterns.singleton.Database;
+import main.designpatterns.singleton.withclass.Application;
+import main.designpatterns.singleton.withclass.Database;
 import main.designpatterns.singleton.User;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import test.BaseUnitTest;
 
-class SingletonTest extends BaseUnitTest {
+class SingletonClassTest extends BaseUnitTest {
 
     @Test
     @DisplayName("All applications use same Database")

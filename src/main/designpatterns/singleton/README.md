@@ -49,7 +49,34 @@ class Application {
 
 내용은 동일하지만 기술적으로 많은 방법들이 있다.
 
-### 방법 1
+### 방법 1 (Initialization)
+
+클래스의 생성자를 private으로 만들어서 외부에서 생성이 불가하도록 만들고, 내부에 고유한 객체를 생성해둔다. 
+
+```java
+class Database {
+    // 프로그램 시작부터 메모리에 떠있다.
+    private static Database instance = new Database();
+    private String currentTime = "";
+
+    private Database() {
+        // 생성자를 private로 만들어 생성을 불가능하도록 강제
+    }
+
+    public static Database getInstance() {
+        // 다르게 생성되는 로직은 없으므로 항상 같은 객체
+        return instance;
+    }
+}
+```
+
+`Database` 객체를 가져오고 싶다면, `Database db = Database.getInstance()` 로 가져올 수 있으며 항상 같은 객체이다.
+
+### 방법 2 (Lazy Initialization)
+
+방법 1은 `Database` 클래스를 사용하지 않아도 메모리에 할당되어 있는 점이 부담이 될 수 있다.
+
+`getInstance()` 와 같이 인스턴스를 사용하려고 할 때 객체 생성을 하는 방법이다.
 
 ```java
 class Database {
@@ -78,33 +105,37 @@ class Database {
 
 `Database` 객체를 가져오고 싶다면, `Database db = Database.getInstance()` 로 가져올 수 있으며 항상 같은 객체이다.
 
-### 방법 2
-
-```java
-class Database {
-    // 프로그램 시작부터 메모리에 떠있다.
-    private static Database instance = new Database();
-    private String currentTime = "";
-
-    private Database() {
-        // 생성자를 private로 만들어 생성을 불가능하도록 강제
-    }
-
-    public static Database getInstance() {
-        // 다르게 생성되는 로직은 없으므로 항상 같은 객체
-        return instance;
-    }
-}
-```
-
-`Database` 객체를 가져오고 싶다면, `Database db = Database.getInstance()` 로 가져올 수 있으며 항상 같은 객체이다.
-
-### 방법 3
+### 방법 3 (Enum)
 
 Java 5 이후 버전에 추가된 [Enum](https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html)을 사용하는 방법이다. 
 현재까지 알려진 방법 중에는 가장 완벽하다고 알려진 방법이다.
 
-(추가 예정)
+```java
+public enum Database {
+
+    INSTANCE;
+
+    private String currentTime;
+
+    Database() {
+        currentTime = "";
+    }
+
+    public void setCurrentTime(String timeString) {
+        this.currentTime = timeString;
+    }
+
+    public String getCurrentTime() {
+        return currentTime;
+    }
+}
+```
+
+클래스의 생성자를 private으로 하여 생성을 막는 방법은, 기술적으로는 완전히 막을 수 없다. 
+
+Java의 [Reflection](https://www.oracle.com/technical-resources/articles/java/javareflection.html)을 사용하면 생성자를 public으로 바꿀 수 있다고 한다.
+
+하지만 Enum은 객체의 생성을 정의된 것 이외로 할 수가 없어서 이를 막을 수 있다고 한다.
 
 ## 참고
 

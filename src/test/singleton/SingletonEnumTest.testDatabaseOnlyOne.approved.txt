@@ -1,0 +1,9 @@
+# Database time updated to 00:00:00
+[User(Amy={last login: 00:00:00}})]
+[User(Alice={last login: 00:00:00}})]
+# Database time updated to 00:11:22
+[User(Amy={last login: 00:00:00}}), User(Bob={last login: 00:11:22}})]
+[User(Alice={last login: 00:00:00}}), User(Bread={last login: 00:11:22}})]
+# Database time updated to 00:33:44
+[User(Amy={last login: 00:00:00}}), User(Bob={last login: 00:11:22}}), User(Carl={last login: 00:33:44)}})]
+[User(Alice={last login: 00:00:00}}), User(Bread={last login: 00:11:22}}), User(Chris={last login: 00:33:44)}})]

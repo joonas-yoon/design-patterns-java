@@ -16,7 +16,7 @@ Java로 구현해보는 디자인 패턴
 - [ ] Builder Pattern
 - [x] **[Factory Method Pattern](src/main/designpatterns/factorymethod)**
 - [ ] Prototype Pattern
-- [ ] **[Singleton Pattern](src/main/designpatterns/singleton)**
+- [x] **[Singleton Pattern](src/main/designpatterns/singleton)**
 
 ### 구조 패턴 (Structural Design Patterns)
 

@@ -1,4 +1,4 @@
-package main.designpatterns.singleton;
+package main.designpatterns.singleton.withclass;
 
 public class Database {
 

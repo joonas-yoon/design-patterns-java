@@ -1,4 +1,6 @@
-package main.designpatterns.singleton;
+package main.designpatterns.singleton.withenum;
+
+import main.designpatterns.singleton.User;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,7 +14,7 @@ public class Application {
     }
 
     public void addUser(User user) {
-        Database db = Database.getInstance();
+        Database db = Database.INSTANCE;
         user.setDescription("{last login: " + db.getCurrentTime() + "}");
         users.add(user);
     }
