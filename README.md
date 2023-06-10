@@ -12,7 +12,7 @@ Java로 구현해보는 디자인 패턴
 
 > 주로 생성 방식이나 절차를 결정하는 것과 관련된 패턴
 
-- [ ] **[Abstract Factory Pattern](src/main/designpatterns/abstractfactory)**
+- [x] **[Abstract Factory Pattern](src/main/designpatterns/abstractfactory)**
 - [ ] Builder Pattern
 - [x] **[Factory Method Pattern](src/main/designpatterns/factorymethod)**
 - [ ] Prototype Pattern
